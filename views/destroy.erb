@@ -1,0 +1,10 @@
+<% @cookbook.all.each_with_index do |recipe, index| %>
+  <li>
+    <%= "#{index + 1} - #{recipe.name}" %>
+  </li>
+<% end %>
+
+<form method="POST" action="/destroy">
+  <p>Index of the recipe to remove: <input type="text" name="index_to_destroy"></p>
+  <input type="submit">
+</form>

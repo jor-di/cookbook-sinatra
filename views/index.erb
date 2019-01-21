@@ -1,0 +1,11 @@
+<%= Time.now %>
+
+<ul class="list-group">
+  <% @cookbook.all.each do |recipe| %>
+    <li class="list-group-item">
+      <%= recipe.name %>
+    </li>
+  <% end %>
+</ul>
+<a href="/new">Create a recipe</a>
+<a href="/destroy">Destroy a recipe</a>
